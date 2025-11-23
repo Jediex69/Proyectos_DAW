@@ -101,16 +101,6 @@ namespace PAC_desarrollo_1
 - Framework: .NET (versión estándar para aplicaciones de consola)
 - Entorno: Cualquier IDE compatible con .NET (Visual Studio, Visual Studio Code, Rider…)
 
-## 🚀 Cómo ejecutar el proyecto
-- Clona el repositorio:
-git clone https://github.com/tuusuario/nombre-del-repo.git
-
-- Entra en la carpeta del proyecto:
-cd nombre-del-repo
-
-- Compila y ejecuta:
-dotnet run
-
 ## 📚 Aprendizajes adquiridos
 Durante esta práctica se han trabajado los siguientes conceptos:
 - Lectura y validación de datos por consola.
@@ -118,13 +108,6 @@ Durante esta práctica se han trabajado los siguientes conceptos:
 - Implementación de bucles y operaciones matemáticas.
 - Uso de listas genéricas (List<int>).
 - Manipulación y presentación de datos en consola.
-
-## 💡 Posibles mejoras futuras
-- Implementar menú interactivo.
-- Permitir generar más de una secuencia en la misma ejecución.
-- Añadir manejo de excepciones más avanzado.
-- Crear pruebas unitarias para validar la función generadora de Fibonacci.
-- Exportar la secuencia generada a un archivo (txt, json, csv).
 
 ## 📝 Licencia
 Este proyecto se publica únicamente con fines educativos como parte del módulo de Programación del CFGS Desarrollo de Aplicaciones Web.
