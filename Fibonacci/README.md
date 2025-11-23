@@ -126,10 +126,9 @@ namespace PAC_desarrollo_1
 ## 📚 Aprendizajes adquiridos
 Durante esta práctica se han trabajado los siguientes conceptos:
 - Lectura y validación de datos por consola.
-- Manejo de tipos básicos y conversión segura (int.TryParse).
+- Manejo de tipos básicos y conversión.
 - Implementación de bucles y operaciones matemáticas.
-- Uso de listas genéricas (List<int>).
-- Manipulación y presentación de datos en consola.
+- Presentación de datos en consola.
 
 ## 📝 Licencia
 Este proyecto se publica únicamente con fines educativos como parte del módulo de Programación del CFGS Desarrollo de Aplicaciones Web.
