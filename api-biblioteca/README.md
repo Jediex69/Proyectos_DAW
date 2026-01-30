@@ -1,6 +1,6 @@
 # 📚 API REST de Biblioteca Digital
 
-Esta es una API REST sencilla construida con \*\*Node.js\*\* y \*\*Express\*\*. Permite gestionar un catálogo de libros mediante operaciones CRUD básicas.
+Esta es una API REST sencilla construida con **Node.js** y **Express**. Permite gestionar un catálogo de libros mediante operaciones CRUD básicas.
 
 ## 🛠️ Tecnologías utilizadas
 
