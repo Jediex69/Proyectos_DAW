@@ -5,11 +5,11 @@ const PORT = 3000;
 //Middleware para que Express entienda JSON
 app.use(express.json());
 
-//Base de datos simulada
-let libros = [
-    {id: 1, titulo: 'El Quijote', autor: 'Miguel de Cervantes'},
-    {id: 2, titulo: 'Cien Años de Soledad', autor: 'Gabriel García Márquez'}
-];
+// Importamos los datos iniciales del archivo datos.js
+const librosIniciales = require('./datos');
+
+// Inicializamos nuestra "base de datos" con los libros importados
+let libros = [...librosIniciales];
 
 //-- RUTAS --
 
@@ -18,13 +18,24 @@ app.get('/libros', (req, req_res) => {
     req_res.status(200).json(libros);
 });
 
-// 2. Agregar un nuevo libro (POST)
+// 2. Agregar un nuevo libro (POST) con validación
 app.post('/libros', (req, req_res) => {
+    const { titulo, autor } = req.body;
+
+    // Validación: Si no hay título o autor, devolver error 400
+    if (!titulo || !autor) {
+        return req_res.status(400).json(
+            { error: "Faltan datos",
+              mensaje: "El título y el autor son obligatorios."
+            });
+    }
+    
     const nuevoLibro = {
         id: libros.length + 1,
-        titulo: req.body.titulo,
-        autor: req.body.autor
+        titulo: titulo,
+        autor: autor
     };
+
     libros.push(nuevoLibro);
     req_res.status(201).json(nuevoLibro);
 });
@@ -47,6 +58,27 @@ app.delete('/libros/:id', (req, req_res) => {
     const id = parseInt(req.params.id);
     libros = libros.filter(l => l.id !== id);
     req_res.status(204).send();
+});
+
+// 5. Buscar libros por autor (GET con Query Params)
+// Ejemplo de uso: http://localhost:3000/libros/buscar?autor=Orwell
+app.get('/libros/buscar', (req, res) => {
+    const autorBusqueda = req.query.autor;
+
+    if (!autorBusqueda) {
+        return res.status(400).json({ mensaje: "Debes proporcionar un autor para buscar." });
+    }
+
+    // Filtramos los libros cuyo autor contenga el texto buscado (ignorando mayúsculas/minúsculas)
+    const resultados = libros.filter(l => 
+        l.autor.toLowerCase().includes(autorBusqueda.toLowerCase())
+    );
+
+    if (resultados.length > 0) {
+        res.json(resultados);
+    } else {
+        res.status(404).json({ mensaje: `No se encontraron libros del autor: ${autorBusqueda}` });
+    }
 });
 
 // Iniciar el servidor
