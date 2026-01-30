@@ -29,10 +29,10 @@ El servidor estará disponible en http://localhost:3000.
 
 ## 📌 Endpoints
 
-**GET /libros:** Obtiene todos los libros.
-**POST /libros:** Agrega un libro (requiere JSON con titulo y autor).
-**PUT /libros/:id:** Actualiza un libro por ID.
-**DELETE /libros/:id:** Elimina un libro por ID.
+- **GET /libros:** Obtiene todos los libros.
+- **POST /libros:** Agrega un libro (requiere JSON con titulo y autor).
+- **PUT /libros/:id:** Actualiza un libro por ID.
+- **DELETE /libros/:id:** Elimina un libro por ID.
 
 
 
