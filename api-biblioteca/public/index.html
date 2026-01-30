@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca DAW</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        input { padding: 8px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 8px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+        .btn-delete { 
+            background: #dc3545; 
+            padding: 5px 10px; 
+            font-size: 12px; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        .btn-delete:hover { background: #c82333; }
+    </style>
+</head>
+<body>
+    <h1>📚 Gestión de Biblioteca</h1>
+
+    <div class="card">
+        <h3>Añadir nuevo libro</h3>
+        <input type="text" id="titulo" placeholder="Título del libro">
+        <input type="text" id="autor" placeholder="Autor">
+        <button onclick="agregarLibro()">Guardar Libro</button>
+    </div>
+
+    <div class="card">
+        <table id="tabla-libros">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        async function cargarLibros() {
+            const res = await fetch('/libros');
+            const libros = await res.json();
+            const cuerpo = document.querySelector('#tabla-libros tbody');
+            
+            cuerpo.innerHTML = libros.map(l => `
+                <tr>
+                    <td>${l.id}</td>
+                    <td>${l.titulo}</td>
+                    <td>${l.autor}</td>
+                    <td>
+                        <button class="btn-delete" onclick="eliminarLibro(${l.id})">Eliminar</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+        async function agregarLibro() {
+            const titulo = document.getElementById('titulo').value;
+            const autor = document.getElementById('autor').value;
+
+            await fetch('/libros', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ titulo, autor })
+            });
+
+            document.getElementById('titulo').value = '';
+            document.getElementById('autor').value = '';
+            cargarLibros();
+        }
+
+        async function eliminarLibro(id) {
+                if(confirm('¿Seguro que quieres eliminar este libro?')) {
+                    await fetch(`/libros/${id}`, { method: 'DELETE' });
+                    cargarLibros(); // Refresca la tabla automáticamente tras borrar
+                }
+            }
+
+        cargarLibros();
+    </script>
+</body>
+</html>

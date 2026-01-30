@@ -1,9 +1,31 @@
 const express = require('express');
 const app = express();
+
+// PRUEBA DE ARRANQUE:
+console.log("-----------------------------------------");
+console.log("INICIANDO SERVIDOR DE BIBLIOTECA...");
+console.log("-----------------------------------------");
+
+console.log("--- El Logger se ha cargado correctamente ---");
 const PORT = 3000;
 
 //Middleware para que Express entienda JSON
 app.use(express.json());
+
+// Middleware de registro (Logger)
+app.use((req, res, next) => {
+    const fecha = new Date().toLocaleString(); // Obtiene fecha y hora actual
+    const metodo = req.method;                // GET, POST, etc.
+    const url = req.url;                      // La ruta que visitan
+
+    console.log(`[${fecha}] Petición recibida: ${metodo} en ${url}`);
+    
+    // next() es fundamental para que la petición siga su camino a la ruta
+    next();
+});
+
+// Servir archivos estáticos desde la carpeta 'public'
+app.use(express.static('public'));
 
 // Importamos los datos iniciales del archivo datos.js
 const librosIniciales = require('./datos');
