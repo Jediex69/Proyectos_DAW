@@ -1,0 +1,5 @@
+body {
+    /* Sky CSS Linear Gradient Background */
+    background: #076585;
+    background: linear-gradient(to right, #076585, #fff);
+}
