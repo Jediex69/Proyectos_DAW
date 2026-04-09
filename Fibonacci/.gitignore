@@ -1,0 +1,106 @@
+############################
+# ARCHIVOS ESENCIALES A IGNORAR EN .NET
+############################
+
+# Compilación
+bin/
+obj/
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+*.log
+
+############################
+# VISUAL STUDIO
+############################
+
+# Carpeta donde VS guarda datos temporales del proyecto
+.vs/
+
+# Archivos de usuario
+*.user
+*.suo
+*.userosscache
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Rider
+.idea/
+
+############################
+# VISUAL STUDIO CODE
+############################
+.vscode/
+
+############################
+# SISTEMA
+############################
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+############################
+# DOTNET SPECÍFICO
+############################
+
+# Archivos generados automáticamente
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de dependencias
+*.deps.json
+
+# Carpeta de packages descargados (opcional)
+packages/
+
+############################
+# TESTS
+############################
+TestResult*/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+############################
+# PUBLICACIÓN
+############################
+/publish/
+/out/
+
+############################
+# TEMPORALES
+############################
+*.tmp
+*.temp
+*.bak
+*.old
+
+############################
+# LOGS
+############################
+*.log
+
+############################
+# OTROS
+############################
+
+# IconCache
+IconCache.db
+
+# Archivos de configuración de IDEs
+*.sln.ide
+
+# Archivos de backups de IDE
+*.orig
