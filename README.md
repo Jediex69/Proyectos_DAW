@@ -1,42 +1,105 @@
-# 🧠 Proyectos DAW
+<p align="center">
+  <img src="assets/banner.png" alt="Proyectos DAW Banner" width="100%">
+</p>
 
-Bienvenido a mi repositorio de proyectos del ciclo **Desarrollo de Aplicaciones Web (DAW)**.  
-Aquí iré recopilando y organizando todos los trabajos, prácticas y experimentos que vaya desarrollando a lo largo del curso.
+# 💻 Proyectos DAW
+
+> Colección de proyectos desarrollados durante el **Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)**.
+
+En este repositorio recopilo algunos de los proyectos realizados durante mi formación como **Técnico Superior en Desarrollo de Aplicaciones Web**, aplicando tecnologías frontend, backend, bases de datos y desarrollo Full Stack.
+
+Cada proyecto representa una etapa de aprendizaje y refleja la evolución de mis conocimientos en programación, arquitectura de aplicaciones y desarrollo web.
 
 ---
 
-## 📁 Estructura del repositorio
+# 🎯 Objetivos
 
-Cada carpeta representa un proyecto independiente.  
-Dentro de cada una encontrarás su propio código fuente, recursos y documentación específica.
+Este repositorio tiene como finalidad:
+
+- Consolidar los conocimientos adquiridos durante el CFGS DAW.
+- Documentar proyectos desarrollados durante la formación.
+- Mostrar la evolución técnica a lo largo del ciclo.
+- Servir como portfolio de desarrollo web.
 
 ---
 
-## 🚀 Cómo usar este repositorio
+# 📚 Proyectos disponibles
 
-Puedes clonar el repositorio y explorar cada proyecto por separado:
+| Proyecto | Tecnologías | Estado |
+|----------|-------------|--------|
+| 🎟 Compra de Entradas | HTML · CSS · JavaScript | ✅ |
+| 🔢 Fibonacci | C# | ✅ |
+| 📚 API Biblioteca | Node.js · Express | ✅ |
+| 🌐 MERN Stack | MongoDB · Express · React · Node.js | 🚧 |
 
-```bash
-git clone https://github.com/Jediex69/proyectos_DAW.git
-cd proyectos_DAW/cblf
+---
+
+# 🛠 Tecnologías
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Bootstrap
+
+### Backend
+
+- Node.js
+- Express
+- PHP
+- Laravel
+
+### Bases de datos
+
+- MySQL
+- MongoDB
+
+### Otros
+
+- Git
+- GitHub
+- Visual Studio
+- Visual Studio Code
+
+---
+
+# 📂 Estructura del repositorio
+
+```text
+Proyectos_DAW
+│
+├── Compra de entradas/
+├── Fibonacci/
+├── api-biblioteca/
+├── mern-stack/
+│
+└── assets/
 ```
 
 ---
 
-## 📚 Tecnologías utilizadas
-HTML5 / CSS3 / JavaScript
-Python
-MySQL / SQLite
-Git / GitHub
+# 🚧 Próximas mejoras
+
+- Añadir nuevos proyectos desarrollados tras finalizar el CFGS.
+- Unificar la documentación de todos los proyectos.
+- Incorporar capturas de pantalla.
+- Mejorar la estructura de los README individuales.
 
 ---
 
-## 🎯 Objetivo
-Este repositorio sirve como portafolio técnico y como espacio de aprendizaje. Cada proyecto refleja una etapa del proceso de desarrollo.
+# 👨‍💻 Autor
+
+**Jesús Díaz**
+
+Técnico Superior en Desarrollo de Aplicaciones Web  
+Junior Cybersecurity Analyst
+
+- 💼 LinkedIn: https://www.linkedin.com/in/jesus-diaz-exposito
+- 🌐 Portfolio: https://jediex69.github.io
+- 🐙 GitHub: https://github.com/Jediex69
 
 ---
 
-## 💬 Contacto
-Si tienes sugerencias, dudas o simplemente quieres saludar, puedes encontrarme en GitHub como 👉 Jediex69
-
-¡Gracias por visitar el repositorio! 😊
+> *"Cada proyecto representa un paso más en mi evolución como desarrollador y profesional del sector IT."*****
