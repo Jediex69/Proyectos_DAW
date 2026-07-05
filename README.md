@@ -1,108 +1,91 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Banner Fibonacci" width="100%">
+  <img src="assets/banner.png" alt="Proyectos DAW Banner" width="100%">
 </p>
 
-# 🔢 Fibonacci
+# 💻 Proyectos DAW
 
-> Aplicación de consola desarrollada en **C#** para generar y visualizar la sucesión de Fibonacci como práctica de programación estructurada y lógica algorítmica.
+> Colección de proyectos desarrollados durante el **Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)**.
 
----
+En este repositorio recopilo algunos de los proyectos realizados durante mi formación como **Técnico Superior en Desarrollo de Aplicaciones Web**, aplicando tecnologías frontend, backend, bases de datos y desarrollo Full Stack.
 
-# 📋 Descripción
-
-Este proyecto fue desarrollado durante el **Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)** como ejercicio de aprendizaje para reforzar conceptos fundamentales de programación en **C#**.
-
-La aplicación solicita al usuario un número dentro de un rango determinado, genera la sucesión de Fibonacci correspondiente y muestra tanto la secuencia generada como su recorrido inverso.
-
-Aunque se trata de una aplicación sencilla, permite practicar estructuras de control, manejo de variables, interacción con el usuario y diseño de algoritmos.
+Cada proyecto representa una etapa de aprendizaje y refleja la evolución de mis conocimientos en programación, arquitectura de aplicaciones y desarrollo web.
 
 ---
 
 # 🎯 Objetivos
 
-- Comprender el funcionamiento de la sucesión de Fibonacci.
-- Practicar la programación estructurada en C#.
-- Implementar algoritmos iterativos.
-- Validar la entrada de datos del usuario.
-- Consolidar el uso de bucles y variables.
+Este repositorio tiene como finalidad:
+
+- Consolidar los conocimientos adquiridos durante el CFGS DAW.
+- Documentar proyectos desarrollados durante la formación.
+- Mostrar la evolución técnica a lo largo del ciclo.
+- Servir como portfolio de desarrollo web.
 
 ---
 
-# 🛠 Tecnologías utilizadas
+# 📚 Proyectos disponibles
 
-- C#
-- .NET
+| Proyecto | Tecnologías | Estado |
+|----------|-------------|--------|
+| 🎟 Compra de Entradas | HTML · CSS · JavaScript | ✅ |
+| 🔢 Fibonacci | C# | ✅ |
+| 📚 API Biblioteca | Node.js · Express | ✅ |
+| 🌐 MERN Stack | MongoDB · Express · React · Node.js | 🚧 |
+
+---
+
+# 🛠 Tecnologías
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Bootstrap
+
+### Backend
+
+- Node.js
+- Express
+- PHP
+- Laravel
+
+### Bases de datos
+
+- MySQL
+- MongoDB
+
+### Otros
+
+- Git
+- GitHub
 - Visual Studio
+- Visual Studio Code
 
 ---
 
-# ✨ Funcionalidades
-
-- Solicita al usuario un número entero comprendido entre **7 y 22**.
-- Valida que el valor introducido se encuentre dentro del rango permitido.
-- Genera la sucesión de Fibonacci mediante un algoritmo iterativo.
-- Muestra la secuencia generada por consola.
-- Presenta la sucesión en orden inverso.
-
----
-
-# 📷 Capturas
-
-*(Pendiente de añadir capturas de la ejecución de la aplicación.)*
-
----
-
-# 📂 Estructura del proyecto
+# 📂 Estructura del repositorio
 
 ```text
-Fibonacci/
-├── assets/
-│   ├── banner.png
-│   └── (capturas)
-├── Program.cs
-└── README.md
+Proyectos_DAW
+│
+├── Compra de entradas/
+├── Fibonacci/
+├── api-biblioteca/
+├── mern-stack/
+│
+└── assets/
 ```
 
 ---
 
-# 🚀 Cómo ejecutar el proyecto
+# 🚧 Próximas mejoras
 
-1. Clonar el repositorio.
-2. Abrir el proyecto con **Visual Studio**.
-3. Compilar la solución.
-4. Ejecutar la aplicación desde la consola.
-
----
-
-# 💡 Conceptos trabajados
-
-Durante el desarrollo de este proyecto se practicaron conceptos como:
-
-- Variables y tipos de datos.
-- Bucles (`while`).
-- Condicionales (`if`).
-- Validación de entradas.
-- Algoritmos iterativos.
-- Programación de aplicaciones de consola.
-- Manipulación de secuencias numéricas.
-
----
-
-# 📚 Aprendizajes
-
-Este proyecto permitió consolidar conocimientos básicos de programación en C#, especialmente relacionados con el diseño de algoritmos y el control del flujo de ejecución.
-
-También sirvió como introducción al desarrollo de aplicaciones de consola y a la resolución de problemas mediante programación estructurada.
-
----
-
-# 🔮 Posibles mejoras
-
-- Permitir cualquier valor positivo utilizando `BigInteger`.
-- Implementar una versión recursiva del algoritmo para comparar ambas soluciones.
-- Añadir una interfaz gráfica (Windows Forms o WPF).
-- Exportar la secuencia generada a un archivo de texto.
-- Comparar tiempos de ejecución entre distintas implementaciones.
+- Añadir nuevos proyectos desarrollados tras finalizar el CFGS.
+- Unificar la documentación de todos los proyectos.
+- Incorporar capturas de pantalla.
+- Mejorar la estructura de los README individuales.
 
 ---
 
