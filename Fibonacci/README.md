@@ -1,140 +1,100 @@
-# 📘 Proyecto: Generación de la Secuencia de Fibonacci
+<p align="center">
+  <img src="assets/banner.png" alt="Banner Fibonacci" width="100%">
+</p>
 
-Práctica del módulo de Programación — CFGS Desarrollo de Aplicaciones Web
+# 🔢 Fibonacci
 
-Este proyecto forma parte de una práctica del módulo de Programación del Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW).  
-El objetivo es desarrollar una aplicación de consola en C# que:
-
-- Solicite un número entero dentro de un rango concreto.  
-- Valide la entrada del usuario.  
-- Genere la secuencia de Fibonacci del tamaño indicado.  
-- Muestre la secuencia original e invertida.  
+> Aplicación desarrollada en **C#** para calcular y visualizar la sucesión de Fibonacci como práctica de programación y lógica algorítmica.
 
 ---
 
-## 📌 Objetivos de la práctica
+# 📋 Descripción
 
-- Trabajar con entrada y validación de datos por consola.  
-- Usar estructuras de control y colecciones.  
-- Implementar la generación de la secuencia de Fibonacci.  
-- Manipular listas (inversión, almacenamiento, recorrido).  
-- Familiarizarse con la sintaxis básica del lenguaje C#.  
+Este proyecto fue desarrollado durante el CFGS de Desarrollo de Aplicaciones Web con el objetivo de practicar la programación en C#, la estructura de aplicaciones de consola y la implementación de algoritmos matemáticos.
 
 ---
 
-## 🧮 ¿Qué es la secuencia de Fibonacci?
+# 🎯 Objetivos
 
-La secuencia de Fibonacci es una sucesión numérica donde cada número es la suma de los dos anteriores.  
-Comienza típicamente por: 0, 1, 1, 2, 3, 5, 8, 13...
-En este proyecto, el usuario decide cuántos términos quiere generar.
-
----
-
-## ▶️ Funcionamiento del programa
-
-1. El programa solicita al usuario un número entero entre **7 y 22**.  
-2. Se valida que la entrada sea correcta:
-   - Debe ser un número entero.  
-   - Debe estar dentro del rango permitido.  
-3. Una vez validado:
-   - Se genera una lista con los primeros *n* números de Fibonacci.  
-   - Se muestra la secuencia original.  
-   - Se muestra la secuencia invertida.  
+- Comprender el funcionamiento de la sucesión de Fibonacci.
+- Practicar estructuras de control.
+- Mejorar la lógica de programación.
+- Consolidar el uso de C#.
 
 ---
 
-## 🧩 Código principal
+# 🛠 Tecnologías utilizadas
 
-```csharp
-using System;
+- C#
+- .NET
+- Visual Studio
 
-namespace PAC_desarrollo_1
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            //Recoger por consola un número entero y validar su valor.
+---
 
-            Console.Write("Introduce un número entero comprendido entre 7 y 22 (ambos inclusive): ");
+# ✨ Funcionalidades
 
-            int numero = int.Parse(Console.ReadLine());
-            Console.WriteLine();
+- Generación de la sucesión de Fibonacci.
+- Introducción del número de elementos.
+- Validación de datos introducidos.
+- Salida formateada por consola.
 
-            if (numero >= 7 && numero <= 22)
-            {
-                /*Crear la secuencia Fibonacci compuesta por tantos
-                 elementos como indique el valor del número introducido.
-                 Para ello declaramos tres variables x, y, z, donde x e y estan inicializadas
-                 a 0 y 1 respectivamente, y z la usamos para almacenar la suma de x e y*/
+---
 
-                int x = 0;
-                int y = 1;
-                int z;
+# 📷 Capturas
 
-                Console.WriteLine("La secuencia de Fibonacci para el número " + numero + " es: \t\t");
+*(Aquí añadiremos una o varias imágenes de la aplicación.)*
 
-                for (int i = 0; i < numero; i++)
-                {
-                    //Se imprime el valor actual de x.
-                    Console.Write(x + ", ");
+---
 
-                    //Se calcula z y se actualizan x e y para la siguiente iteración del bucle.
-                    z = x + y;
-                    x = y;
-                    y = z;
-                }
-                Console.WriteLine();
+# 📂 Estructura del proyecto
 
-                /*Crear la secuencia Fibonacci con los valores invertidos:
-                 se toma como referencia la secuencia Fibonacci generada y se invierte su orden.*/
-
-                Console.WriteLine();
-                Console.WriteLine("La secuencia de Fibonacci inversa para el número " + numero + " es: \t");
-
-                for (int i = 0; i < numero; i++)
-                {
-                    /*Deshacemos la secuencia directa partiendo del último valor asignado en
-                     memoria a las variables y actualizándolas del siguiente modo 
-                     para obtener la secuencia inversa*/
-                    z = y - x;
-                    y = x;
-                    x = z;
-
-                    //Se imprime el valor de z.
-                    Console.Write(z + ", ");
-                }
-                Console.WriteLine();
-                Console.WriteLine();
-            }
-            else
-            {
-                //En caso de que el número introducido sea incorrecto.
-                Console.WriteLine("El número introducido no es correcto.");
-            }
-        }
-    }
-}
-
+```text
+Fibonacci/
+├── assets/
+├── README.md
+└── ...
 ```
 
-## 🛠️ Tecnologías utilizadas
-- Lenguaje: C#
-- Framework: .NET (versión estándar para aplicaciones de consola)
-- Entorno: Cualquier IDE compatible con .NET (Visual Studio, Visual Studio Code, Rider…)
+---
 
-## 📚 Aprendizajes adquiridos
-Durante esta práctica se han trabajado los siguientes conceptos:
-- Lectura y validación de datos por consola.
-- Manejo de tipos básicos y conversión.
-- Implementación de bucles y operaciones matemáticas.
-- Presentación de datos en consola.
+# 🚀 Cómo ejecutar el proyecto
 
-## 📝 Licencia
-Este proyecto se publica únicamente con fines educativos como parte del módulo de Programación del CFGS Desarrollo de Aplicaciones Web.
+1. Clonar el repositorio.
+2. Abrir la solución con Visual Studio.
+3. Compilar el proyecto.
+4. Ejecutar la aplicación.
 
+---
 
+# 📚 Aprendizajes
 
+Durante este proyecto se trabajaron aspectos como:
 
+- Variables y tipos de datos.
+- Bucles.
+- Condicionales.
+- Métodos.
+- Lógica algorítmica.
+- Programación en C#.
 
+---
 
+# 🔮 Posibles mejoras
+
+- Interfaz gráfica.
+- Exportación de resultados.
+- Cálculo de números grandes mediante `BigInteger`.
+- Comparativa entre implementación iterativa y recursiva.
+
+---
+
+# 👨‍💻 Autor
+
+**Jesús Díaz**
+
+Técnico Superior en Desarrollo de Aplicaciones Web  
+Junior Cybersecurity Analyst
+
+- 💼 LinkedIn: https://www.linkedin.com/in/jesus-diaz-exposito
+- 🌐 Portfolio: https://jediex69.github.io
+- 🐙 GitHub: https://github.com/Jediex69
